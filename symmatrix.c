@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main()
+{
+int a[10][10];
+int rows,cols,i,j;
+int symmetric=1;
+printf("Enter number of rows and columns: ");
+scanf("%d %d", &rows,&cols);
+printf("Enter matrix elements: \n");
+for(i=0;i<rows;i++)
+{
+for(j=0;j<cols;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+if(rows!=cols)
+{
+symmetric=0;
+}
+else
+{
+for(i=0;i<rows;i++)
+{
+for(j=0;j<cols;j++)
+{
+if(a[i][j] != a[j][i])
+{
+symmetric = 0;
+break;
+}
+}
+if(symmetric ==0)
+break;
+}
+}
+if(symmetric == 1)
+printf("True");
+else
+printf("False");
+return 0;
+}
+
