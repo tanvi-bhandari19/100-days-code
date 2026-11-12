@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main()
+{
+enum Month
+{
+JANUARY=1,
+FEBRUARY,
+MARCH,
+APRIL,
+MAY,
+JUNE,
+JULY,
+AUGUST,
+SEPTEMBER,
+OCTOBER,
+NOVEMBER,
+DECEMBER
+};
+enum Month month;
+int choice;
+
+printf("Enter month number(1-12): ");
+scanf("%d",&choice);
+
+month=choice;
+switch(month)
+{
+case JANUARY:
+case MARCH:
+case MAY:
+case JULY:
+case AUGUST:
+case OCTOBER:
+case DECEMBER:
+printf("31 days");
+break;
+
+case APRIL:
+case JUNE:
+case SEPTEMBER:
+case NOVEMBER:
+printf("30 days");
+break;
+
+case FEBRUARY:
+printf("28 days");
+break;
+
+default:
+printf("Invalid month");
+}
+return 0;
+}
